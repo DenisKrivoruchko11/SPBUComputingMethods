@@ -1,1 +1,0 @@
-# SPBUProgrammingSem4
