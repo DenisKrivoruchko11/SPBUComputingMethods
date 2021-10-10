@@ -22,3 +22,5 @@ cabal.project.local~
 .HTF/
 .ghc.environment.*
 .idea/
+src/test/homework2/task1/_trial_temp/_trial_marker
+src/test/homework2/task1/_trial_temp/test.log
