@@ -6,7 +6,7 @@ IN:
     m -- information about each edge as list of 3 lists. 
     1st -- info about sources, 2nd -- info about targets, 3rd -- info about weights (only units allowed).
 OUT:
-    v -- count of triangles.
+    c -- count of triangles.
 """
 
 
