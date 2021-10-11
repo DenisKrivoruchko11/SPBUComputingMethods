@@ -1,5 +1,5 @@
 from scipy.sparse import csr_matrix
-from scipy.sparse.csgraph import dijkstra
+from scipy.sparse.csgraph import bellman_ford
 
 
 """
@@ -14,7 +14,7 @@ OUT:
 
 def sssp(m, start):
     def compute():
-        return dijkstra(csgraph=matrix, directed=True, indices=start, return_predecessors=False)
+        return bellman_ford(csgraph=matrix, directed=True, indices=start, return_predecessors=False)
 
     matrix = csr_matrix(m)
 
