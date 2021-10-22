@@ -1,21 +1,7 @@
 import unittest
 import numpy as np
 from src.main.homework1.backend.gpu_computing import apply_filters_to_matrix, compute_on_gpu
-
-
-def e(main_value, addition_value=None):
-    result = list(map(lambda i: main_value, range(3)))
-
-    if addition_value is None:
-        result.append(main_value)
-    else:
-        result.append(addition_value)
-
-    return result
-
-
-def get_pixmap(h, w):
-    return np.array(list(map(lambda i: list(map(lambda j: e(w * i + j), range(w))), range(h))), dtype=np.uint8)
+from src.test.homework1.backend.utils import get_pixmap, e
 
 
 class GpuComputing(unittest.TestCase):
