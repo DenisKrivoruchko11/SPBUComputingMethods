@@ -6,4 +6,4 @@
 Реализовать выбранные алгоритмы на (py)graphblas.
 
 ## To use application, in root of repository run:
-`pip install -r requirements.txt` \
+`pip install -r requirements.txt`
