@@ -42,3 +42,8 @@ jobs:
         python -m unittest src/test/homework2/task3/bfs.py
         python -m unittest src/test/homework2/task3/sssp.py
         python -m unittest src/test/homework2/task3/triangles_count.py
+        python -m unittest src/test/homework1/backend/common.py
+        python -m unittest src/test/homework1/backend/cpu_computing.py
+        python -m unittest src/test/homework1/backend/gpu_computing.py
+
+
