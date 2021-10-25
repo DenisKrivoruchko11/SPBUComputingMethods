@@ -22,3 +22,6 @@ cabal.project.local~
 .HTF/
 .ghc.environment.*
 .idea/
+src/main/homework1/frontend/__pycache__/
+src/main/homework1/backend/__pycache__/
+src/main/homework1/__pycache__/
