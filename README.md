@@ -20,6 +20,11 @@
 ### Task 6:
 Подготовить отчёт с анализом производительности и масштабируемости полученного решения.
 
+## Homework 2
+
+### Task 4:
+Сравнить производительность полученных реализаций, составить отчёт.
+
 ## To start application in root of repository run:
 `pip install -r requirements.txt` \
 `python3 -m src.main.homework1.run`
