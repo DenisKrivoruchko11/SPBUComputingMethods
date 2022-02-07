@@ -26,6 +26,7 @@ cabal.project.local~
 src/test/homework2/task2/_trial_temp/
 src/test/homework2/task1/_trial_temp/_trial_marker
 src/test/homework2/task1/_trial_temp/test.log
+src/test/homework2/task2/_trial_temp/
 src/main/homework1/frontend/__pycache__/
 src/main/homework1/backend/__pycache__/
 src/main/homework1/__pycache__/
