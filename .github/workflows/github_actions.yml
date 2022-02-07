@@ -33,3 +33,7 @@ jobs:
         python -m unittest src/test/homework2/task2/bfs.py
         python -m unittest src/test/homework2/task2/sssp.py
         python -m unittest src/test/homework2/task2/triangles_count.py
+        python -m unittest src/test/homework2/task1/bfs.py
+        python -m unittest src/test/homework2/task1/sssp.py
+        python -m unittest src/test/homework2/task1/triangles_count.py
+        python -m unittest src/test/homework1/backend/cpu_computing.py
