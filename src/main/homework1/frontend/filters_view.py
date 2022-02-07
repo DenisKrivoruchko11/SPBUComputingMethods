@@ -1,9 +1,6 @@
-import os
-from os import listdir
-
 from PyQt5.QtWidgets import QMainWindow, QHBoxLayout, QVBoxLayout, QPushButton, QLabel, QWidget
 from src.main.homework1 import config
-from src.main.homework1.backend import computing
+from src.main.homework1.backend import computing, folder_computing
 from src.main.homework1.frontend.create_filter_view import CreateFilterView
 from src.main.homework1.frontend.saved_view import SavedView
 from src.main.homework1.frontend.two_pictures_view import TwoPicturesView
@@ -11,7 +8,7 @@ from src.main.homework1.frontend.utils import center
 
 
 class FiltersView(QMainWindow):
-    def __init__(self, previous_view, pixmaps, is_file_mode):
+    def __init__(self, previous_view, p, is_file_mode):
         def configure_main_widget():
             def configure_main_layout():
                 def configure_filters_layout():
@@ -70,30 +67,21 @@ class FiltersView(QMainWindow):
 
                     def configure_main_buttons_layout():
                         def configure_computing_buttons_layout():
-                            def display_result(result):
+                            def display_result(on_cpu):
                                 if is_file_mode:
+                                    result = computing.compute(p, filters_matrices_list, on_cpu)
                                     TwoPicturesView(previous_view, result[0][0], result[0][1]).show()
                                 else:
-                                    path = config.directory_to_save
-                                    if not os.path.exists(path):
-                                        os.mkdir(path)
-
-                                    number = len(listdir(path))
-                                    for item in result:
-                                        item[1].save(f"{path}/file{number}.png")
-                                        number += 1
-
+                                    folder_computing.compute(p, filters_matrices_list, on_cpu)
                                     SavedView(previous_view).show()
 
                                 self.hide()
 
                             def cpu_button_click():
-                                result = computing.compute(pixmaps, filters_matrices_list, True)
-                                display_result(result)
+                                display_result(True)
 
                             def gpu_button_click():
-                                result = computing.compute(pixmaps, filters_matrices_list, False)
-                                display_result(result)
+                                display_result(False)
 
                             cpu_button = QPushButton("Compute using CPU")
                             cpu_button.clicked.connect(cpu_button_click)

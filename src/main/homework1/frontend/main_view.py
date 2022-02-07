@@ -1,13 +1,6 @@
-from fnmatch import fnmatch
-import sys
-
-from PyQt5 import QtGui
-from PyQt5.QtWidgets import QWidget, QApplication, QPushButton, QMainWindow, QVBoxLayout, QFileDialog
+from PyQt5.QtWidgets import QWidget, QPushButton, QMainWindow, QVBoxLayout, QFileDialog
 from src.main.homework1.frontend.filters_view import FiltersView
 from src.main.homework1.frontend.one_picture_view import OnePictureView
-from os import listdir
-from os.path import isfile, join
-
 from src.main.homework1.frontend.utils import center
 
 
@@ -23,17 +16,9 @@ class MainView(QMainWindow):
                         self.hide()
 
                 def directory_button_click():
-                    directory = QFileDialog.getExistingDirectory(caption="Choose a directory")
-                    if directory != "":
-                        pictures = []
-
-                        for f in listdir(directory):
-                            path = join(directory, f)
-
-                            if isfile(path) and (fnmatch(f, "*.png") or fnmatch(f, "*.jpg") or fnmatch(f, "*.jpeg")):
-                                pictures.append(QtGui.QPixmap(path))
-
-                        FiltersView(self, pictures, False).show()
+                    path = QFileDialog.getExistingDirectory(caption="Choose a directory")
+                    if path != "":
+                        FiltersView(self, path, False).show()
                         self.hide()
 
                 picture_button = QPushButton("Work with one picture")
