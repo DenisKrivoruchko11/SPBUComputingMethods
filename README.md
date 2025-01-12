@@ -1,37 +1,57 @@
-## Homework 1
+# Image Processing Application
 
-### Task 1:
-Реализовать приложение с графическим интерфейсом пользователя, позволяющее открыть папку с изображениями, выбрать изображение, просмотреть его, просмотреть информацию о нём (размер в пикселях, размер в мегабайтах).
+## Introduction
 
-### Task 2:
-Расширить приложение графической компонентой задания матричного фильтра. Необходимо предусмотреть возможность выбора типа фильтра, дефолтных значений, размера фильтра, корректировку весов.
+The Image Processing Application is a sophisticated tool designed for efficient image manipulation and analysis. This project aims to provide a user-friendly interface for applying various image filters, comparing results, and processing images in bulk. Built with Python and leveraging the PyQt5 framework, this application is suitable for both academic and practical applications in image processing.
 
-### Task 3:
-Расширить приложение возможностью отображать одновременно два изображения: до и после применения фильтра. Предусмотреть возможность сохранять результат применения фильтра.
+## Features
 
-### Task 4:
-Реализовать применение матричных фильтров с использованием GPGPU. Интегрировать с разработанным графическим интерфейсом. Предусмотреть возможность применения нескольких фильтров последовательно.
+- **User-Friendly Interface**: Intuitive navigation for selecting images and applying filters.
+- **Image Filtering**: Apply a variety of matrix filters to enhance or modify images.
+- **Dual Image Comparison**: View original and filtered images side by side for easy comparison.
+- **Batch Processing**: Select a folder of images to apply filters in bulk, with results saved to a specified directory.
+- **Performance Analysis**: Generate reports on the performance of different filtering algorithms.
 
-### Task 5:
-Расширить разрабатываемое приложение возможностью потоковой обработки изображений: выбираем папку с изображениями и ко всем применяем заданные фильтры. Результаты применения фильтров сохраняются в отдельную выбранную папку.
+## Installation
 
-### Task 6:
-Подготовить отчёт с анализом производительности и масштабируемости полученного решения.
+To set up the project, follow these steps:
 
-## Homework 2
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd <repository-directory>
+   ```
 
-### Task 1:
-Реализовать выбранные алгоритмы на (py)graphblas.
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Task 2:
-Реализовать выбранные алгоритмы на sciPy.
+3. Run the application:
+   ```bash
+   python3 -m src.main.run
+   ```
 
-### Task 3:
-Реализовать выбранные на стандартной библиотеке для анализа графов (можно выбрать в зависимости от языка).
+## Usage
 
-### Task 4:
-Сравнить производительность полученных реализаций, составить отчёт.
+1. Launch the application.
+2. Choose to work with a single image or a directory of images.
+3. Select an image or folder, and apply the desired filters.
+4. View the results and save the processed images as needed.
 
-## To start application in root of repository run:
-`pip install -r requirements.txt` \
-`python3 -m src.main.homework1.run`
+## Future Work
+
+This project serves as a foundation for further development in image processing. Future enhancements may include:
+
+- Integration of more advanced filters and image processing techniques.
+- Improved user interface for better usability.
+- Support for additional image formats.
+- Enhanced performance metrics and reporting features.
+
+## Contribution
+
+Contributions to the project are welcome. Please submit a pull request or open an issue for any suggestions or improvements.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
