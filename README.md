@@ -51,7 +51,3 @@ This project serves as a foundation for further development in image processing.
 ## Contribution
 
 Contributions to the project are welcome. Please submit a pull request or open an issue for any suggestions or improvements.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
